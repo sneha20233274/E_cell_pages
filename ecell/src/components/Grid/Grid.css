@@ -11,8 +11,8 @@
     width: 300px;
     height: 300px;
     border-radius: 10px;
-    border: 1px solid black; /* Border around the section */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow around the border */
+    border: 1px solid black; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,27 +62,4 @@
     filter: brightness(0.9);
   }
 
-  @media (max-width: 768px) {
-    .body-content {
-        flex-direction: column; /* Stack the sections vertically */
-        align-items: stretch; /* Ensure sections stretch to full width */
-        gap: 10px; /* Reduce gap for smaller screens */
-    }
-
-    .gradient-section {
-        order: 1; /* Ensure the gradient section comes first */
-    }
-
-    .logo-section {
-        order: 2; /* Ensure the logo section comes second */
-    }
-
-    .grid-section {
-        order: 3; /* Ensure the grid section comes third */
-    }
-
-    /* Adjust grid layout for smaller tablets */
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
-    }
-}
+  

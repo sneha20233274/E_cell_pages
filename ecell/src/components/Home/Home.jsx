@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Home.css"; // Make sure to include styles in your CSS file
-import profile_photo from '../assets/sneha.png';
+import profile_photo from '../assets/sneh.png';
 import avatar from '../assets/avtar.png';
 
 const Home = () => {

@@ -1,0 +1,142 @@
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: black; 
+    color: #E5E5E5; 
+    font-family: 'Roboto', sans-serif; 
+  }
+  
+  .leftSection {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .rightSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/squid_image.png');
+    position: relative;
+  }
+  
+  .avatar-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    background-color:black;
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+  }
+  
+  .avatar-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .avatar {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: float 3s ease-in-out infinite; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  .avatar-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4); 
+  }
+
+  
+  .avatar:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
+  }
+ 
+  .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #FF5722;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-15px);
+    }
+    50% {
+      transform: translateY(0); 
+    }
+    75% {
+      transform: translateY(10px); 
+    }
+    100% {
+      transform: translateY(0); 
+    }
+  }
+ 
+  .subtitle {
+    font-size: 2rem;
+    margin: 10px 0 20px;
+    font-weight: 500;
+  }
+  
+  .introDetails {
+    margin-bottom: 20px;
+  }
+  
+  .detail {
+    font-size: 1.1rem;
+    margin: 8px 0;
+  }
+  
+  .link {
+    color: #FF6F61; 
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .button {
+    background-color: #FF6F61; 
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #FF3B36; 
+    transform: translateY(-3px); 
+  }
