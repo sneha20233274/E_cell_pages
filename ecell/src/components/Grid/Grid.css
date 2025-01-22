@@ -61,3 +61,28 @@
   .grid-square:hover {
     filter: brightness(0.9);
   }
+
+  @media (max-width: 768px) {
+    .body-content {
+        flex-direction: column; /* Stack the sections vertically */
+        align-items: stretch; /* Ensure sections stretch to full width */
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    .gradient-section {
+        order: 1; /* Ensure the gradient section comes first */
+    }
+
+    .logo-section {
+        order: 2; /* Ensure the logo section comes second */
+    }
+
+    .grid-section {
+        order: 3; /* Ensure the grid section comes third */
+    }
+
+    /* Adjust grid layout for smaller tablets */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    }
+}
