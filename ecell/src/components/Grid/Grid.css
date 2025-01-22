@@ -18,8 +18,6 @@
     position: relative;
     transition: border 0.3s ease;
   }
-  
-  /* Outline effect when hovering */
   .section:hover {
     border: 3px solid #ff3d81;
   }
@@ -62,84 +60,48 @@
     cursor: pointer;
     transition: background-color 0.3s ease, border 0.3s ease;
   }
-  
-  /* Hover Effect on Grid Squares */
   .grid-square:hover {
     filter: brightness(0.9);
-    border: 2px solid #ff3d81; /* Adds border on hover */
+    border: 2px solid #ff3d81;
   }
-  
-  /* Outline when clicked on grid square */
+
   .grid-square.clicked {
-    border: 2px solid #8B0000; /* Outline color after click */
-    background-color: #8B0000; /* Change to a red color when clicked */
+    border: 2px solid #8B0000; 
+    background-color: #8B0000; 
   }
   
-  @media (max-width: 767px) {
+  @media(max-width: 900px){
     .body-content {
-      display: flex;
-      flex-direction: column; /* Stack sections vertically */
+      display: flex;         
+      flex-wrap: wrap; 
+      justify-content: center; 
       align-items: center;
-      gap: 20px;
-      width: 100%;
-      margin: 0 auto;
     }
-  
     .gradient-section {
-      order: 2; /* Move gradient-section below the grid-section */
-      width: 90%; /* Adjust width for smartphones */
-      height: 300px; /* Adjust height as needed */
-      background: linear-gradient(45deg, #6c1eff, #ff3d81);
+        width: 600px;
+        height: 300px;
+    }
+    .logo-section, .grid-section {
+      width: 300px;
+      height: 300px;
+  }
+  }
+  @media(max-width: 600px){
+    .body-content {
+      display: flex;   
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;   
+    }
+    .section {
+      width: 300px;
+      height: 300px;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      border: 1px solid black; 
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-  
-    .grid-section {
-      order: 1; /* Move grid-section to the top */
-      background-color: #e0e0e0;
-      box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
-      width: 90%; /* Adjust width for smartphones */
-      height: 300px; /* Adjust height as needed */
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5px;
-      width: 80%;
-      height: 80%;
-    }
-  
-    .grid-square {
-      width: 100%;
-      height: 100%;
-      background-color: #003B71;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-  
-    .grid-square:hover {
-      filter: brightness(0.9);
-    }
-  
-    .logo-section {
-      order: 3; /* Ensure logo-section remains at the bottom */
-      background-color: white;
-      width: 90%;
-      height: 300px; /* Adjust height as needed */
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      position: relative;
     }
   }
-  

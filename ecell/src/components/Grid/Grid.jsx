@@ -8,14 +8,14 @@ const Body = () => {
 
   const handleSquareClick = (index) => {
     const newColors = [...gridColors];
-    newColors[index] = "#8B0000"; // Change color to red when clicked
+    newColors[index] = "#8B0000"; 
     setGridColors(newColors);
 
     if (index === 8) {
       const updatedColors = [...newColors];
       clickSequence.forEach((clickedIndex, i) => {
         setTimeout(() => {
-          updatedColors[clickedIndex] = "#003B71"; // Reset to original color after timeout
+          updatedColors[clickedIndex] = "#003B71"; 
           setGridColors([...updatedColors]);
         }, i * 400);
       });
